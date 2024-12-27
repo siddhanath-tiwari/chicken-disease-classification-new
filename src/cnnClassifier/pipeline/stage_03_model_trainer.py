@@ -108,3 +108,18 @@ class Training:
             path=self.config.trained_model_path,
             model=self.model
         )
+
+
+
+
+
+
+if __name__ == '__main__':
+    try:
+        logger.info(f">>>>>>> stage {STAGE_NAME} started <<<<<<<<<")
+        obj = ModelTrainingPipeline()
+        obj.main()
+        logger.info(f">>>>>>> stage {STAGE_NAME} complated <<<<<<<\n\nX==========X")
+    except Exception as e:
+        logger.exception(e)
+        raise e
